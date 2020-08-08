@@ -1,25 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navbars from './component/navbar';
+import Home from './component/Home';
+import Category from './component/category';
+import Product from './component/product';
+import Admin from './component/admin area';
+import Login, { fakeAuth } from "./component/login";
+import {BrowserRouter as Router, Switch ,Route,Redirect} from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbars/>
+      <Switch>
+     <Route path="/" exact component={Home} />
+     <Route path="/category" component={Category} />
+     <Route path='/product' component = {Product} />
+     <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
+     <Route path="/login" component={Login} />
+
+     </Switch>
+
     </div>
+    </Router>
+  )}
+    const PrivateRoute = ({ component: Component, ...rest }) => {
+      return (
+        <Route
+          {...rest}
+          render={(props) =>
+            fakeAuth.isAuthenticated === true ? (
+              <Component {...props} />
+            ) : (
+              <Redirect
+                to={{ pathname: "/login", state: { from: props.location } }}
+              />
+            )
+          }
+        />
   );
 }
 

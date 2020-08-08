@@ -1,38 +1,228 @@
 .App {
   text-align: center;
 }
+/*----product-----*/
+.divpro{
+  background-image: url("https://t.motionelements.com/stock-video/arts/me1931521-fur-background-color-mix-hd-a0230-poster.jpg?v=1456792131");
+  background-position: center;
+  background-repeat: no-repeat , repeat;
+  background-size: cover;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+.select{
+  font-family:  Tahoma;
+  color: rgb(4, 39, 25);
+  
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  font-style: normal;
+width: 500px;
+ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.prod{
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: sans-serif;
+  font-size:30px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: rgb(4, 39, 25);
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.list {
+  list-style: none;
+  padding: 0px;
+  } 
+
+.lis { padding: 10px 20px;
+  background-color: rgba(45, 158, 121,0.2);
+  border: 1px solid #fff ;
+margin :5px 0;
+transition: 0.5s;
+border-radius: 5px;}
+.lis:nth-child(1){
+  background-color:rgba(45, 158, 121,0.6); ;
+
+}
+.lis:nth-child(2){
+  background-color:rgba(45, 158, 121,0.4); ;
+
+}
+.lis:nth-child(3){
+  background-color:rgba(45, 158, 121,0.3); ;
+
+}
+.lis:hover {
+  transform:scale(1.06);
+  background: rgba(9, 85, 60); ;
+}
+/*-------productItem-------------*/
+.card-title{
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size:30px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: rgba(45, 158, 121);
+}
+.data{
+  background-color: rgba(45, 158, 121,0.2),
+}
+.span{
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #154b46;
+}
+/*-------category-------*/
+.box{
+   width:600px;
+   margin-top: 100px;
+   margin-left: 25%;
+   border-bottom: 20px solid #154b46;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;   
+}
+  .link{
+   color :#fff;
+   background: #237c75;
+   padding: 10px 20px;
+   font-size: 20px;
+   font-weight : 700;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;   
+ }
+
+ .ul{
+position: relative;
+background: #fff;
+
+ }
+   .box .ul .li{
+   list-style: none;
+   padding:10px;
+   /*width:300px;*/
+   background: #fff;
+   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+   transition: 0.5;
+ }
+ 
+ .box .ul .li:hover{
+   transform:scale(1.1);
+   z-index: 100;
+   background: #237c75;
+   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+   color: #fff;;}
+  .li{
+     text-decoration: none;
+      color: black;
+  } 
+/*---------admin area---------*/
+.login-form{
+  margin:60px auto;
+  color: white;
+  background-image: url("https://i.pinimg.com/originals/dd/4d/60/dd4d60009fe992f067e9e0371e991115.jpg");
+
+  -webkit-linear-gradient:(to right, #237c75);
+width: 600px;
+  box-shadow: 
+    0px 2px 10px rgba(0,0,0,0.2), 
+    0px 10px 20px rgba(0,0,0,0.3), 
+    0px 30px 60px 1px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  padding: 50px;
+}
+.login-form .head{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.login-form .head .h1{
+  font-size: 2.2em;
+}
+h1{
+
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+background-position: 50% 50%;
+position: relative;
+line-height:normal;
+font-size:40px;
+background-color:#FFF;
+text-align: center;
+ }
+h1 ::after{
+  content: attr(data-text);
+position: absolute;
+text-shadow:4px 4px 0px #FFF, 
+7px 7px 0px #877667;
+left: 0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+z-index: -1;
+line-height:normal;
+font-size:12rem;
+background-color:#FFF;
+ }
+ .text {
+  border: none;
+  background: none;
+  box-shadow: 0px 2px 0px 0px white;
+  width: 100%;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  font-size: 1em;
+  outline: none;
+    }
+    .login-form .form .text::placeholder {
+      color: #D3D3D3;
+    }
+    .login-form .form .text .pass {
+      border: none;
+      background: none;
+      box-shadow: 0px 2px 0px 0px white;
+      width: 100%;
+      color: white;
+      font-size: 1em;
+      outline: none;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .login .form .pass::placeholder {
+      color: #D3D3D3;
+    }
+     .btn-login {
+       display: flex;
+      background: none;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0px 0px 0px 2px white;
+      border-radius: 3px;
+      padding: 5px 2em;
+      transition: 0.5s;
+    }
+     .btn-login:hover {
+      background: white;
+      color: dimgray;
+      transition: 0.5s;
+    }
+    .btn-login{
+      text-decoration: none;
+      color: white;
+      float: right;
+    
+    }
+    .page{
+      border: none;
+      background: none;
+      box-shadow: 0px 2px 0px 0px white;
+      width: 100%;
+      margin-top: 200px;
+      font-size: 20px;
+      outline: none;
+    }
